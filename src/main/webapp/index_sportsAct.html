@@ -1,0 +1,159 @@
+<html>
+<head>
+<link href="schoolPerson.jpeg" rel="shortcut icon" type="x-icon" />
+<style>
+body, input, select {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 16px;
+	color: #eee;
+}
+
+h1, h3 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 32px;
+	color: black;
+}
+
+h3 {
+	color: #1c87c9;
+}
+
+.main-block, .info {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-block {
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100%;
+	background: url(1.jpg) no-repeat center;
+	background-size: cover;
+}
+
+form {
+	width: 30%;
+	padding: 15px;
+	margin-bottom: 10px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+input, select {
+	padding: 15px;
+	margin-bottom: 19px;
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid #eee;
+}
+
+input::placeholder {
+	color: #eee;
+}
+
+option {
+	color: black;
+}
+
+a {
+	display: block;
+	width: 200px;
+	padding: 10px;
+	margin: 20px auto 0;
+	border: none;
+	border-radius: 15px;
+	background: #1c87c9;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+}
+
+a:hover {
+	background: white;
+	color: black;
+}
+
+select {
+	width: 48%;
+}
+
+.x input {
+	display: block;
+	width: 200px;
+	padding: 10px;
+	margin: 2px auto 0;
+	border: none;
+	border-radius: 15px;
+	background: #1c87c9;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	margin-left: 130px;
+}
+</style>
+</head>
+
+<body>
+	<div class="main-block">
+		<h1>
+			<b>Register For Sports Activity</b>
+		</h1>
+		<form action="AS_SaveServlet" method="post">
+			<table>
+				<tr>
+					<td>Activity Id:</td>
+					<td><input type="number" name="id" required="required" /></td>
+				</tr>
+
+				<tr>
+					<td>Activity Name:</td>
+					<td><select name="aname" required="required"
+						style="width: 230px">
+							<option>Soccer</option>
+							<option>Cricket</option>
+							<option>Basketball</option>
+							<option>Race 400m</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>Student Name:</td>
+					<td><input type="text" name="sname" required="required" /></td>
+				</tr>
+				<tr>
+					<td>Student Email:</td>
+					<td><input type="email" name="semail" required="required" /></td>
+				</tr>
+				<tr>
+					<td>Group Name:</td>
+					<td><select name="gname" style="width: 230px"
+						required="required">
+							<option>CPCM Group 1</option>
+							<option>CPCM Group 2</option>
+							<option>CPCM Group 3</option>
+							<option>Other</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="x">
+							<input type="submit" value="SaveActivity" />
+						</div>
+					</td>
+				</tr>
+			</table>
+			<a href="index.html"><b>Register for Other Activities</b></a> 
+						<a href="Activities.html"><b>View Other Activities</b></a> 
+			
+			
+					</form>
+	</div>
+</body>
+</html>
